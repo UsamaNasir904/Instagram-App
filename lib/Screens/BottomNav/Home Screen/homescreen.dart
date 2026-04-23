@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:instagram_series/Screens/BottomNav/Home%20Screen/Massages/massagescreen.dart';
 import 'package:instagram_series/Widgets/uihelper.dart';
 
 class HomeScreen extends StatelessWidget{
@@ -72,7 +73,9 @@ class HomeScreen extends StatelessWidget{
         centerTitle: true,
         actions: [
           IconButton(onPressed: (){}, icon: UiHelper.CustomImage(imgurl: "Shape (1).png")),
-          IconButton(onPressed: (){}, icon: UiHelper.CustomImage(imgurl: "Shape (2).png"))
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MassageScreen()));
+          }, icon: UiHelper.CustomImage(imgurl: "Shape (2).png"))
         ],
       ),
       body: SingleChildScrollView(
